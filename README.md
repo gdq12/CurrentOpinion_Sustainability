@@ -1,3 +1,3 @@
 testing images
 
-!(image1)[/Users/gdquiceno2/Downloads/newlpot.png]
+!(image1)[images/influencers_timeline.png]
