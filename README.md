@@ -6,13 +6,35 @@
 
 This is the final project to full fill the curriculum requirements at [Spiced Data Science Bootcamp](https://www.spiced-academy.com/en/program/data-science/berlin). At the moment, it consists of an extensive pipeline to extract incoming tweets on sustainability, use various python libraries to determine demographic information on the tweet authors and make an assessment on the sentiments of each tweet over time. The basic infrastructure of the pipeline has been set with optimization to be conducted over time. Specification on what must be improve upon are specified below.
 
-### Pipeline Outline
+### Pipeline Outline (Extract and Transform)
 
 To collect tweets, the streamlistener from the tweepy library was used to pick up tweets on sustainability and placed in a mongodb database, to then be segmented and stored in PostgreSQL for later extraction and transformation. The data was later retrieved from the postgres tables and analyzed locally for gender, age, ethnicity, geo-location and topic modeling. Greater detail on the specifics of extraction and transformation will be elaborated at a later time point.
 
 ### Tech List
 
-- 
+General:
+- Python
+- AWS (RDS, EC2, DB Document)
+
+Demographics:
+- Geocoder, Geopy
+- cv2
+- Ethnicolr
+- Spacy NER
+- Networkx
+- dlib face_frontal
+- caffe model
+
+Topic Modeling:
+- preprocessor
+- wordsegment
+- nltk
+- gensim
+- vaderSentiment
+
+EDA
+- Plotly
+
 
 ### Initial Findings
 
@@ -29,3 +51,12 @@ Based on the images above and other exploratory data analysis (EDA) about 'out f
 ![non_influencer_age](images/non_influencer_age.png)
 
 This initial analysis demonstrates the effect of tweet bots have on twitter data and also indicates the need of an implementation in the pipeline to eliminate tweet bot tweets prior to analysis.
+
+### Improvements to be made
+
+- implement algorithm to prune out tweetbot activity
+- clean up all codes from jupyter notebook into .py files
+- optimize topic modeling
+- use another mongodb cloud for pipeline (DB document isn't free!)
+- implement the extraction and transformation from local host (macbook pro early 2011) to an AWS cloud service
+- implement final EDA into a Dash board
