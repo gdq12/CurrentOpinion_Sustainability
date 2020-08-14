@@ -1,3 +1,3 @@
 testing images
 
-!(image1)[images/influencers_timeline.png]
+![image1](images/influencer_timeline.png)
