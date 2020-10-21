@@ -4,7 +4,7 @@
 
 ### Description
 
-This is the final project to full fill the curriculum requirements at [Spiced Data Science Bootcamp](https://www.spiced-academy.com/en/program/data-science/berlin). At the moment, it consists of an extensive pipeline to extract incoming tweets on sustainability, use various python libraries to determine demographic information on the tweet authors and make an assessment on the sentiments of each tweet over time. The basic infrastructure of the pipeline has been set with optimization to be conducted over time. Specification on what must be improve upon are specified below.
+The purpose of this project is to gain some insight into public opinion on the topic of sustainability in hopes to determine the degree public efforts play on sustainability schemes' success. This was all initiated as the final project to full fill the curriculum requirements at [Spiced Data Science Bootcamp](https://www.spiced-academy.com/en/program/data-science/berlin). At the moment, it consists of an extensive pipeline to extract incoming tweets on sustainability, use various python libraries to determine demographic information on the tweet authors and make an assessment on the sentiments of each tweet over time. The basic infrastructure of the pipeline has been set with optimization to be conducted over time. Specification on what must be improve upon are specified below.
 
 ### Pipeline Outline (Extract and Transform)
 
@@ -54,9 +54,8 @@ This initial analysis demonstrates the effect of tweet bots have on twitter data
 
 ### Improvements to be made
 
-- implement algorithm to prune out tweetbot activity
-- clean up all codes from jupyter notebook into .py files
+- implement a python library to prune out tweetbot activity or build own algorithm
+- implement data processing into ETL pipeline (currently in jupyter notebook)
 - optimize topic modeling
-- use another mongodb cloud for pipeline (DB document isn't free!)
-- implement the extraction and transformation from local host (macbook pro early 2011) to an AWS cloud service
-- implement final EDA into a Dash board
+- Dockerize the ETL pipeline to easily implement this into cloud services, e.g. AWS
+- Display final Exploratory Data Analysis in a Dashboard
